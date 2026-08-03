@@ -89,6 +89,39 @@ class TestSimulationSmoke(unittest.TestCase):
         self.assertIn("focus", tips[0])
         self.assertIn("reason", tips[0])
 
+    def test_state_clamp_keeps_bounds(self):
+        from nexus.core.models import CoreState
+
+        s = CoreState(chaos=1.5, balance=-0.5, order=0.3)
+        s.clamp()
+        self.assertEqual(s.chaos, 1.0)
+        self.assertEqual(s.balance, 0.0)
+        self.assertEqual(s.order, 0.3)
+
+    def test_quarantine_assessment_for_destructive_rule_breaking(self):
+        from nexus.core.ability_schema import (
+            AbilitySchema,
+            AbilityStability,
+            AbilityGrowthTag,
+        )
+        from nexus.core.policy.assessment import assess_ability, is_quarantine_candidate
+
+        ability = AbilitySchema(
+            name="Test Absolute Sink",
+            family="energy",
+            subject_domains=["physics"],
+            effects={"chaos": 0.1},
+            stability=AbilityStability.RULE_BREAKING,
+            growth_tag=AbilityGrowthTag.DESTRUCTIVE_ORIENTED,
+        )
+        self.assertTrue(is_quarantine_candidate(ability))
+        a = assess_ability(ability, research_mode=True)
+        self.assertTrue(a["accept"])
+        self.assertTrue(a["quarantine"])
+        self.assertFalse(a["embody"])
+        a_prod = assess_ability(ability, research_mode=False)
+        self.assertFalse(a_prod["accept"])
+
 
 if __name__ == "__main__":
     unittest.main()
