@@ -98,7 +98,7 @@ The documentation implies several build tasks that still need to exist in code:
 1. ~~A canonical simulation package boundary.~~ (decided: `src/nexus/simulation`)
 2. ~~Normalize simulation engine/state modules under the canonical path (Issue #3).~~ **Done**
 3. ~~A minimal Super-Simulation entrypoint (Issue #4).~~ **Done**
-4. A smoke test for simulation initialization (Issue #5).
+4. ~~A smoke test for simulation initialization (Issue #5).~~ **Done**
 5. CI coverage for CLI and simulation startup (Issue #6).
 6. A structured changelog or status update workflow (Issue #7).
 
