@@ -1,12 +1,14 @@
 # NEXUS
 
-NEXUS is a formal, contract-first framework for a Universal Operating System. Its purpose is to define a stable, extensible substrate for subject-domain modules, capability schemas, and reproducible system behavior.
+## Abstract
 
-GAIA is the Worldwide Operating System within the NEXUS architecture. It represents the Earth-scale operational layer that coordinates planetary scope, domain integration, and system-wide composition.
+NEXUS is a formal, contract-first framework for a Universal Operating System. It specifies a stable and extensible substrate for subject-domain modules, capability schemas, and reproducible system behavior. The architecture is intended to support incremental system expansion while preserving determinism, traceability, and maintainability.
 
-## Super-Simulation Model
+GAIA is the Worldwide Operating System within the NEXUS architecture. It denotes the Earth-scale operational layer for planetary coordination, domain integration, and system-wide composition.
 
-NEXUS development is informed by a super-simulation model in which simulation data, simulation results, and structured domain knowledge are used to derive system modules, validate abstractions, and refine behavior. The design trajectory begins with a physics foundation and is intended to expand toward metaphysical and magical foundations while preserving testability, traceability, and architectural stability.
+## Theoretical Basis
+
+The design of NEXUS is informed by a super-simulation model in which simulation data, simulation results, and structured domain knowledge are used as inputs to module design and system refinement. The development path begins with a physics foundation and is intended to extend toward metaphysical and magical foundations, with each stage remaining testable and formally describable. This approach prioritizes stability, explicit contracts, and controlled evolution of the system model.
 
 ## Authorship
 
