@@ -1,1 +1,4 @@
-__all__ = ["core", "simulation", "subjects", "io", "policy"]
+"""NEXUS.
+
+Copyright (c) 2026 Kyle Alexander Steen.
+"""
