@@ -71,13 +71,33 @@ A status file and at least one tracking issue should remain current so the proje
 - Batch-of-10 Primordial Walk orchestration (Issue #4 entrypoint).
 - Deleting the `nexus.sim` package (still required by tests and entrypoint).
 
+### 7. Super-Simulation entrypoint (2026-08-03)
+
+**Public entrypoint:** `nexus.simulation.initialize_super_simulation` / `SuperSimulation`.
+
+**Role relative to the operating systems:**
+
+- NEXUS = Universal OS substrate.
+- GAIA = Worldwide / planetary OS layer within NEXUS.
+- Super-Simulation = developmental model that produces structured evidence (state deltas, policy acceptance, subject coverage, heuristic recommendations) used to prioritize what those OS layers should formalize next.
+
+**Ability source:** Superpower Wiki entries are ingested as labeled mechanisms (not unconstrained fantasy). Each ability must carry family, subject domains, effects on the seven CoreState variables, stability, and growth tag.
+
+**Minimal surface (Issue #4):**
+
+- Primordial baseline state (high Chaos / Void, low Order / Law / Light).
+- `ingest_payload` / `ingest_ability` / `ingest_batch`.
+- `snapshot`, `reset`, `recommend` (heuristic build focus only).
+
+**Not in scope for #4:** full batch documentation artifacts, fitness functions, knowledge graph, or automatic code generation of OS modules.
+
 ## Required Build Work
 
 The documentation implies several build tasks that still need to exist in code:
 
 1. ~~A canonical simulation package boundary.~~ (decided: `src/nexus/simulation`)
 2. ~~Normalize simulation engine/state modules under the canonical path (Issue #3).~~ **Done**
-3. A minimal Super-Simulation entrypoint (Issue #4).
+3. ~~A minimal Super-Simulation entrypoint (Issue #4).~~ **Done**
 4. A smoke test for simulation initialization (Issue #5).
 5. CI coverage for CLI and simulation startup (Issue #6).
 6. A structured changelog or status update workflow (Issue #7).
