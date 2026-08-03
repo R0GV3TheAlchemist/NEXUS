@@ -31,20 +31,19 @@ class CoreState:
 
 
 @dataclass
-class AbilityRecord:
-    name: str
-    family: str
-    subject_domains: List[str]
-    physics_analog: str = ""
-    effects: Dict[str, float] = field(default_factory=dict)
-    domain_effects: Dict[str, Dict[str, float]] = field(default_factory=dict)
-    scale: str = ""
-    stability: Stability = Stability.CONDITIONALLY_STABLE
-    growth_tag: GrowthTag = GrowthTag.CONTEXT_DEPENDENT
-    notes: str = ""
+class RunResult:
+    run_id: str
+    ability: Any
+    before: CoreState
+    after: CoreState
+    interpretation: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
-        data = asdict(self)
-        data["stability"] = self.stability.value
-        data["growth_tag"] = self.growth_tag.value
-        return data
+        ability_dict = self.ability.to_dict() if hasattr(self.ability, "to_dict") else self.ability
+        return {
+            "run_id": self.run_id,
+            "ability": ability_dict,
+            "before": self.before.as_dict(),
+            "after": self.after.as_dict(),
+            "interpretation": self.interpretation,
+        }
