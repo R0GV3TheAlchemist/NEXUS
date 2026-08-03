@@ -3,13 +3,23 @@
 Copyright (c) 2026 Kyle Alexander Steen.
 """
 
+from __future__ import annotations
+
+import argparse
+from typing import Sequence
+
 from .version import __author__, __version__
 
 
-def version_text() -> str:
-    return f"NEXUS {__version__} by {__author__}"
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="nexus")
+    parser.add_argument("--version", action="version", version=f"NEXUS {__version__} by {__author__}")
+    subparsers = parser.add_subparsers(dest="command")
+    subparsers.add_parser("run", help="Run the NEXUS application")
+    return parser
 
 
-def main() -> int:
-    print(version_text())
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = build_parser()
+    parser.parse_args(argv)
     return 0
