@@ -81,6 +81,8 @@ class NEXUSEngine:
             if key in STATE_KEYS and hasattr(self.state, key):
                 current = float(getattr(self.state, key))
                 setattr(self.state, key, current + float(delta))
+        # CoreState is a bounded developmental model, not an unbounded real line.
+        self.state.clamp(0.0, 1.0)
 
     def _persist_run(self, result: RunResult) -> None:
         path = self.output_dir / f"{result.run_id}.json"
