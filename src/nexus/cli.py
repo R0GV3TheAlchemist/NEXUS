@@ -2,8 +2,6 @@ import argparse
 import json
 from pathlib import Path
 
-from nexus.app.runner import run_ability
-
 
 def build_parser():
     parser = argparse.ArgumentParser(prog="nexus", description="NEXUS command-line interface")
@@ -48,15 +46,21 @@ def handle_bootstrap(root: str):
     return {"created": created, "checked": [str(p) for p in files]}
 
 
+def run_command(principal_json: str, ability_json: str, policy_json: str):
+    from nexus.app.runner import run_ability
+
+    principal = json.loads(principal_json)
+    ability = json.loads(ability_json)
+    policy = json.loads(policy_json)
+    return run_ability(principal, ability, policy)
+
+
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
 
     if args.command == "run":
-        principal = json.loads(args.principal)
-        ability = json.loads(args.ability)
-        policy = json.loads(args.policy)
-        result = run_ability(principal, ability, policy)
+        result = run_command(args.principal, args.ability, args.policy)
         print(json.dumps(result, indent=2))
         return 0
 
