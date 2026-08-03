@@ -14,8 +14,9 @@ from .version import __author__, __version__
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="nexus")
     parser.add_argument("--version", action="version", version=f"NEXUS {__version__} by {__author__}")
-    subparsers = parser.add_subparsers(dest="command")
-    subparsers.add_parser("run", help="Run the NEXUS application")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    run_parser = subparsers.add_parser("run", help="Run the NEXUS application")
+    run_parser.add_argument("inputs", nargs="+", help="Inputs required to run NEXUS")
     return parser
 
 
