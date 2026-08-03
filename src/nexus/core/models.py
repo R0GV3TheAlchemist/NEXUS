@@ -29,6 +29,16 @@ class CoreState:
     def as_dict(self) -> Dict[str, float]:
         return asdict(self)
 
+    def clamp(self, low: float = 0.0, high: float = 1.0) -> "CoreState":
+        """Constrain all state variables to [low, high]. Mutates and returns self."""
+        for key in ("chaos", "order", "void", "light", "balance", "law", "magic"):
+            value = float(getattr(self, key))
+            if value < low:
+                setattr(self, key, low)
+            elif value > high:
+                setattr(self, key, high)
+        return self
+
 
 @dataclass
 class RunResult:
