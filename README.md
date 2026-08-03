@@ -1,10 +1,12 @@
 # NEXUS
 
-NEXUS is the user's Universal Operating System: a contract-first, modular framework for building subject-domain capabilities in a stable and extensible way. GAIA is the Worldwide Operating System within the broader NEXUS vision, representing the Earth-scale model and operating layer that the system is intended to grow into.
+NEXUS is a formal, contract-first framework for a Universal Operating System. Its purpose is to define a stable, extensible substrate for subject-domain modules, capability schemas, and reproducible system behavior.
 
-## Super-Simulation
+GAIA is the Worldwide Operating System within the NEXUS architecture. It represents the Earth-scale operational layer that coordinates planetary scope, domain integration, and system-wide composition.
 
-Development is being guided by the super-simulation: simulation data, simulation results, and structured domain knowledge are used to shape modules, schemas, and future behavior. The idea is to move from a physics foundation toward broader metaphysical and magic foundations while keeping the system boring, stable, and testable at each step.
+## Super-Simulation Model
+
+NEXUS development is informed by a super-simulation model in which simulation data, simulation results, and structured domain knowledge are used to derive system modules, validate abstractions, and refine behavior. The design trajectory begins with a physics foundation and is intended to expand toward metaphysical and magical foundations while preserving testability, traceability, and architectural stability.
 
 ## Authorship
 
@@ -16,23 +18,23 @@ If you use this work, cite it as: Kyle Alexander Steen, NEXUS.
 
 ## CLI
 
-- `nexus run` runs a single ability through the pipeline.
-- `nexus bootstrap` checks and creates the current package skeleton.
-- `nexus validate` validates JSON inputs without running the pipeline.
+- `nexus run` executes a single ability through the pipeline.
+- `nexus bootstrap` validates and creates the current package skeleton.
+- `nexus validate` validates JSON inputs without executing the pipeline.
 
 ## Workflows
 
 - `Python package` installs the package, runs the test suite, and checks `python -m nexus --help`.
 - `Smoke` runs help/import checks and the smoke-focused tests.
 
-## Current approach
+## Development posture
 
-The repository is being kept intentionally boring and stable: small imports, predictable startup, and minimal CI surface area.
+The repository follows a boring and stable development posture: minimal imports, deterministic startup, and a constrained CI surface. This reduces variance while preserving room for future expansion.
 
 ## Contributing
 
 1. Fork the repository.
 2. Create a feature branch.
-3. Make your changes.
+3. Implement the change.
 4. Run the test suite locally.
-5. Open a pull request with a clear description of the change.
+5. Open a pull request with a precise technical description.
