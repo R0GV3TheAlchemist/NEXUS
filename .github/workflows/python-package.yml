@@ -1,5 +1,8 @@
 name: Python package
 
+# Full test suite after install. Complements the Smoke workflow.
+# Runs on every push to main and every pull request.
+
 on:
   push:
     branches: [ main ]
@@ -7,13 +10,25 @@ on:
 
 jobs:
   build:
+    name: Install, test suite, CLI help
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - run: python -m pip install --upgrade pip
-      - run: pip install -e .
-      - run: python -m unittest discover -s tests
-      - run: python -m nexus --help
+          python-version: "3.11"
+
+      - name: Install package (editable)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Full unit test suite
+        run: python -m unittest discover -s tests -v
+
+      - name: CLI help (import-safe startup)
+        run: python -m nexus --help
+
+      - name: Simulation entrypoint import check
+        run: python -c "from nexus.simulation import initialize_super_simulation; s = initialize_super_simulation(output_dir='/tmp/nexus_ci'); print(s.snapshot())"
