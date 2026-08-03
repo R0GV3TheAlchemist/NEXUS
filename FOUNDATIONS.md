@@ -28,6 +28,8 @@ A simulation is a structured model used to explore behavior before it is fully r
 
 A super-simulation is the broader developmental model used to integrate multiple simulation layers, structured domain knowledge, and system-level design assumptions. In NEXUS, it is a guiding framework rather than a hidden mechanism.
 
+Super-Simulation runs inform the design of NEXUS (the Universal Operating System substrate) and GAIA (the Worldwide / Earth-scale operating layer). Ability inputs — commonly normalized from Superpower Wiki as labeled mechanisms with physics analogs, subject-domain effects, stability class, and growth tags — are applied under explicit rules. The resulting state transitions, acceptance decisions, and subject coverage are **evidence for what the OS layers may need to support next**, not unconstrained prophecy. Simulation does not replace engineering; it constrains and prioritizes it.
+
 ## Academic Positioning
 
 All concepts should be documented in a formal style suitable for technical and academic discussion. Terms should remain stable, definitions should be explicit, and future expansion should preserve traceability.
