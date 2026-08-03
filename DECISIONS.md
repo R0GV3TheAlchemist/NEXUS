@@ -91,6 +91,19 @@ A status file and at least one tracking issue should remain current so the proje
 
 **Not in scope for #4:** full batch documentation artifacts, fitness functions, knowledge graph, or automatic code generation of OS modules.
 
+### 8. CI coverage for CLI and simulation (2026-08-03)
+
+**Workflows:**
+
+- `Smoke` — explicit steps for CLI help, `tests.cli_smoke_tests`, `tests.simulation_smoke_tests`, and `*smoke*.py` discovery.
+- `Python package` — full suite plus simulation entrypoint import check.
+
+**Triggers:** push to `main` and all pull requests so failures are visible before merge.
+
+**Documentation:** `docs/CI.md`, README Workflows section, `docs/INDEX.md`.
+
+**Branch protection:** recommended (admin setting) to require both checks on `main`; workflows are designed to provide those check names.
+
 ## Required Build Work
 
 The documentation implies several build tasks that still need to exist in code:
@@ -99,7 +112,7 @@ The documentation implies several build tasks that still need to exist in code:
 2. ~~Normalize simulation engine/state modules under the canonical path (Issue #3).~~ **Done**
 3. ~~A minimal Super-Simulation entrypoint (Issue #4).~~ **Done**
 4. ~~A smoke test for simulation initialization (Issue #5).~~ **Done**
-5. CI coverage for CLI and simulation startup (Issue #6).
+5. ~~CI coverage for CLI and simulation startup (Issue #6).~~ **Done**
 6. A structured changelog or status update workflow (Issue #7).
 
 ## Quality Standard
