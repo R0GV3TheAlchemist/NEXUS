@@ -10,7 +10,10 @@
 
 ## Supporting Documents
 
+- `docs/MEMORY.md` — decision log and changelog workflow.
 - `docs/CI.md` — continuous integration workflows for CLI and simulation startup.
+- `CHANGELOG.md` — notable shipped changes.
+- `STATUS.md` / `DECISIONS.md` — current state and architecture decisions.
 - `README.md` — public overview and academic framing.
 - `LICENSE` — project license.
 - `NOTICE` — attribution and licensing notice.
