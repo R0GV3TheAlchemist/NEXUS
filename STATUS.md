@@ -8,15 +8,21 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 
 - The CLI import error was fixed.
 - The CLI smoke tests now exercise `build_parser()` and `main(argv=None)`.
-- A tracking issue exists to manage the remaining documentation, simulation, and governance work.
-- Simulation-related scaffolding exists in both `src/nexus/sim` and `src/nexus/simulation`.
+- Tracking issues #1–#7 manage documentation, simulation, and governance work.
+- **Canonical simulation package decided:** `src/nexus/simulation` (`NEXUSEngine`).
+- `src/nexus/sim` is documented as a compatibility shim (still used by `nexus.app.entrypoint`).
+
+## Architectural Decisions in Force
+
+- One canonical simulation path: `src/nexus/simulation`.
+- `src/nexus/sim` is a temporary compatibility shim, not a second architecture.
+- CLI must remain import-safe and testable without the full app stack.
 
 ## Open Architectural Questions
 
-- Which simulation namespace is canonical?
-- Which modules are implementation and which are compatibility shims?
-- What is the minimal Super-Simulation entrypoint?
-- Which parts of the system are conceptual, scaffolded, or operational?
+- How should `SimulationEngine` / `SimulationState` in the shim be folded into or replaced by the canonical path? (Issue #3)
+- What is the minimal Super-Simulation entrypoint surface? (Issue #4)
+- Which remaining parts of the system are conceptual vs scaffolded vs operational?
 
 ## Working Principles
 
@@ -28,11 +34,12 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 
 ## Planned Next Steps
 
-1. Consolidate simulation namespaces.
-2. Read and normalize simulation engine/state modules.
-3. Add a minimal Super-Simulation smoke test.
-4. Add a decision log for major architectural choices.
-5. Extend CI to protect the CLI and simulation entrypoints.
+1. ~~Consolidate simulation namespaces (choose canonical path).~~ **Done**
+2. Read and normalize simulation engine/state modules under `src/nexus/simulation` (Issue #3).
+3. Add a minimal Super-Simulation entrypoint (Issue #4).
+4. Add a simulation smoke test (Issue #5).
+5. Extend CI to protect the CLI and simulation entrypoints (Issue #6).
+6. Keep the decision/changelog workflow current (Issue #7).
 
 ## Notes
 
