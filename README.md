@@ -4,6 +4,10 @@
 
 Copyright (c) 2026 Kyle Alexander Steen.
 
+## Citation
+
+If you use this work, cite it as: Kyle Alexander Steen, NEXUS.
+
 ## CLI
 
 - `nexus run` runs a single ability through the pipeline.

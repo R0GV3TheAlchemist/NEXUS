@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: NEXUS
+authors:
+  - family-names: Steen
+    given-names: Kyle Alexander
+message: Please cite this work as: Kyle Alexander Steen, NEXUS
+version: 0.1.0
+license: MIT
