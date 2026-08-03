@@ -11,16 +11,18 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 - Tracking issues #1–#7 manage documentation, simulation, and governance work.
 - **Canonical simulation package decided:** `src/nexus/simulation` (`NEXUSEngine`).
 - `src/nexus/sim` is documented as a compatibility shim (still used by `nexus.app.entrypoint`).
+- **Simulation modules normalized (Issue #3):** `CoreState` is the canonical state contract via `nexus.simulation.state`; `NEXUSEngine` is the sole ability-application engine; shadowed `core/policy.py` removed.
 
 ## Architectural Decisions in Force
 
 - One canonical simulation path: `src/nexus/simulation`.
 - `src/nexus/sim` is a temporary compatibility shim, not a second architecture.
+- `CoreState` is the single Primordial Walk state vector (seven variables).
 - CLI must remain import-safe and testable without the full app stack.
 
 ## Open Architectural Questions
 
-- How should `SimulationEngine` / `SimulationState` in the shim be folded into or replaced by the canonical path? (Issue #3)
+- When should `NexusApp` migrate from `SimulationEngine` to `NEXUSEngine`?
 - What is the minimal Super-Simulation entrypoint surface? (Issue #4)
 - Which remaining parts of the system are conceptual vs scaffolded vs operational?
 
@@ -34,8 +36,8 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 
 ## Planned Next Steps
 
-1. ~~Consolidate simulation namespaces (choose canonical path).~~ **Done**
-2. Read and normalize simulation engine/state modules under `src/nexus/simulation` (Issue #3).
+1. ~~Consolidate simulation namespaces (choose canonical path).~~ **Done** (Issue #2)
+2. ~~Read and normalize simulation engine/state modules.~~ **Done** (Issue #3)
 3. Add a minimal Super-Simulation entrypoint (Issue #4).
 4. Add a simulation smoke test (Issue #5).
 5. Extend CI to protect the CLI and simulation entrypoints (Issue #6).
