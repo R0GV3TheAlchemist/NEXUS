@@ -10,6 +10,14 @@ GAIA is the Worldwide Operating System within the NEXUS architecture. It denotes
 
 The design of NEXUS is informed by a super-simulation model in which simulation data, simulation results, and structured domain knowledge are used as inputs to module design and system refinement. The development path begins with a physics foundation and is intended to extend toward metaphysical and magical foundations, with each stage remaining testable and formally describable. This approach prioritizes stability, explicit contracts, and controlled evolution of the system model.
 
+## Ability Substrate
+
+Abilities in NEXUS should be represented as explicit, testable units whose execution depends on a defined substrate, a declared interface, and a bounded operational context. This makes it possible to reason about ability behavior in terms of inputs, outputs, dependencies, and system constraints rather than informal assumptions.
+
+## Future Materials and Grids
+
+The architecture reserves space for later exploration of crystal-based and grid-based technology concepts. Any such additions should be introduced as formalized inputs to the system model rather than as hidden mechanisms, so that future technological metaphors or implementations remain inspectable, reproducible, and academically describable.
+
 ## Authorship
 
 Copyright (c) 2026 Kyle Alexander Steen.
