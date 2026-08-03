@@ -126,6 +126,18 @@ A status file and at least one tracking issue should remain current so the proje
 
 **Consequences:** Contributors update these three files when architecture or notable behavior changes; Issue #7 defines this as the standing workflow.
 
+### 10. CoreState bounds and quarantine (2026-08-03)
+
+**Decision:** After Batch 1 of the Primordial Walk:
+
+1. `CoreState` variables are clamped to **[0, 1]** after every ability effect application.
+2. Abilities that are `rule_breaking` **and** `destructive_oriented` are **quarantine candidates**: mapped in research mode, not embodied as OS identity; production mode may hard-reject them.
+3. Standing steward rule recorded in `FOUNDATIONS.md`: map higher order; never become the Source.
+
+**Rationale:** Batch 1 (abilities 1–10) drove Chaos above 1.0 and Balance below 0 under stacked absolute energy sinks. Unbounded internalization matches the anti-pattern of becoming a total container. Law rose under destruction; the only growth stabilizer in the batch was Absorption Manipulation (control plane).
+
+**Consequences:** Engine clamps state; assessment exposes `quarantine` / `embody` / `steward_note`; walk memory in `docs/walks/BATCH_01.md`.
+
 ## Required Build Work
 
 The documentation implies several build tasks that still need to exist in code:
