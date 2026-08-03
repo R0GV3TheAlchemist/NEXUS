@@ -11,6 +11,7 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 - Tracking issues #1–#7 manage documentation, simulation, and governance work.
 - **Canonical simulation package decided:** `src/nexus/simulation` (`NEXUSEngine`).
 - `src/nexus/sim` is documented as a compatibility shim (still used by `nexus.app.entrypoint`).
+- **Decision/changelog workflow (Issue #7):** `docs/MEMORY.md` process; `CHANGELOG.md` for shipped changes; `DECISIONS.md` for rationale; `STATUS.md` for current state.
 - **CI coverage (Issue #6):** Smoke + Python package workflows explicitly run CLI and simulation smoke; documented in `docs/CI.md`.
 - **Simulation smoke tests (Issue #5):** `tests/simulation_smoke_tests.py` covers import, init, ingest, reject, recommend; discovered by CI `*smoke*.py`.
 - **Super-Simulation entrypoint (Issue #4):** `initialize_super_simulation()` / `SuperSimulation` on the canonical path; primordial baseline, batch ingest; heuristic recommendations.
@@ -43,7 +44,11 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 3. ~~Add a minimal Super-Simulation entrypoint (Issue #4).~~ **Done**
 4. ~~Add a simulation smoke test (Issue #5).~~ **Done**
 5. ~~Extend CI to protect the CLI and simulation entrypoints (Issue #6).~~ **Done**
-6. Keep the decision/changelog workflow current (Issue #7).
+6. ~~Keep the decision/changelog workflow current (Issue #7).~~ **Done** — see `docs/MEMORY.md`, `CHANGELOG.md`.
+
+## Foundation tracking
+
+Issues #1–#7 for documentation, simulation, and governance are complete. Further work should open new issues rather than reopen the closed foundation set.
 
 ## Notes
 
