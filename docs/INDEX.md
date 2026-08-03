@@ -10,6 +10,7 @@
 
 ## Supporting Documents
 
+- `docs/CI.md` — continuous integration workflows for CLI and simulation startup.
 - `README.md` — public overview and academic framing.
 - `LICENSE` — project license.
 - `NOTICE` — attribution and licensing notice.
