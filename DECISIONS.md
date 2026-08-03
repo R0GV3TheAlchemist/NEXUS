@@ -40,12 +40,43 @@ The CLI must keep supporting import-safe startup, `build_parser()`, and `main(ar
 
 A status file and at least one tracking issue should remain current so the project can be resumed safely and reviewed without reconstructing context from chat.
 
+### 6. Simulation module normalization (2026-08-03)
+
+**Boundary after Issue #3:**
+
+| Package | Role | State type | Engine |
+|---------|------|------------|--------|
+| `nexus.simulation` | **Canonical** | `CoreState` (7 Primordial Walk variables) | `NEXUSEngine` |
+| `nexus.sim` | Compatibility shim | `SimulationState` (time_step + ability registry) | `SimulationEngine` |
+
+**Findings from review:**
+
+- `NEXUSEngine` is the real implementation path: AbilitySchema, policy, subjects, ledger, persistence.
+- `SimulationEngine` is a thin ingest/step helper used only by `NexusApp`; it does not share `CoreState`.
+- There was no duplicated business logic to merge line-by-line; the conflict was architectural (two packages, two state models).
+- `nexus.core.policy` package shadowed a legacy `policy.py` module; assessment now lives in `policy/assessment.py` and the dead module file was removed.
+
+**Normalization plan (executed):**
+
+1. Keep `CoreState` as the single simulation state vector under the canonical package.
+2. Add `nexus.simulation.state` re-exporting `CoreState` / `RunResult` so consumers have one import path.
+3. Keep `NEXUSEngine` as the only engine that applies ability effects to `CoreState`.
+4. Leave `nexus.sim` intact as a shim for `NexusApp` until a later migration (out of scope for #3).
+5. Remove the unreachable shadowed `src/nexus/core/policy.py` file.
+6. Defer full app-entrypoint migration and batch/Primordial Walk runner to Issues #4+.
+
+**Not done in #3 (intentionally):**
+
+- Migrating `NexusApp` off `SimulationEngine` (would expand scope into app/policy AAA).
+- Batch-of-10 Primordial Walk orchestration (Issue #4 entrypoint).
+- Deleting the `nexus.sim` package (still required by tests and entrypoint).
+
 ## Required Build Work
 
 The documentation implies several build tasks that still need to exist in code:
 
 1. ~~A canonical simulation package boundary.~~ (decided: `src/nexus/simulation`)
-2. Normalize simulation engine/state modules under the canonical path (Issue #3).
+2. ~~Normalize simulation engine/state modules under the canonical path (Issue #3).~~ **Done**
 3. A minimal Super-Simulation entrypoint (Issue #4).
 4. A smoke test for simulation initialization (Issue #5).
 5. CI coverage for CLI and simulation startup (Issue #6).
