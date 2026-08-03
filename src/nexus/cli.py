@@ -30,15 +30,22 @@ def handle_bootstrap(root: str):
     files = [
         base / "src/nexus/__init__.py",
         base / "src/nexus/app/__init__.py",
+        base / "src/nexus/core/__init__.py",
+        base / "src/nexus/core/policy/__init__.py",
+        base / "src/nexus/core/policy/aaa.py",
         base / "src/nexus/policy/__init__.py",
+        base / "src/nexus/policy/aaa.py",
         base / "src/nexus/accounting/__init__.py",
         base / "src/nexus/sim/__init__.py",
         base / "src/nexus/domains/__init__.py",
     ]
+    created = []
     for path in files:
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.touch(exist_ok=True)
-    return {"created": [str(path) for path in files]}
+        if not path.exists():
+            path.touch()
+            created.append(str(path))
+    return {"created": created, "checked": [str(p) for p in files]}
 
 
 def main(argv=None):
