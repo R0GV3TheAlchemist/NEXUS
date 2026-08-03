@@ -4,3 +4,7 @@ def decide(*args, **kwargs):
 
 def account(*args, **kwargs):
     return {"accounted": True, "args": args, "kwargs": kwargs}
+
+
+def should_accept_ability(*args, **kwargs):
+    return True
