@@ -1,21 +1,16 @@
 # NEXUS
 
-## Command-line usage
+## CLI
 
-Run a single ability:
+- `nexus run` runs a single ability through the pipeline.
+- `nexus bootstrap` checks and creates the current package skeleton.
+- `nexus validate` validates JSON inputs without running the pipeline.
 
-```bash
-nexus run --principal '{"id": "u1"}' --ability '{"name": "Absorption"}' --policy '{}'
-```
+## Workflows
 
-Bootstrap the package skeleton:
+- `Python package` installs the package, runs the test suite, and checks `python -m nexus --help`.
+- `Smoke` runs help/import checks and the smoke-focused tests.
 
-```bash
-nexus bootstrap --root .
-```
+## Current approach
 
-Validate inputs without running the pipeline:
-
-```bash
-nexus validate --principal '{"id": "u1"}' --ability '{"name": "Absorption"}' --policy '{}'
-```
+The repository is being kept intentionally boring and stable: small imports, predictable startup, and minimal CI surface area.
