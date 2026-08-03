@@ -4,6 +4,16 @@
 
 This document records the architectural decisions that keep NEXUS stable, explainable, and easy to extend. It exists so the project can retain memory beyond chat and so implementation work stays aligned with the documented plan.
 
+## How to record decisions
+
+1. Add a numbered section under **Current Decisions** using the template in `docs/MEMORY.md`.
+2. Note the date and a one-line decision statement.
+3. List rationale bullets (why this path, not the alternative).
+4. If the change ships code or user-visible behavior, also add a line under `[Unreleased]` in `CHANGELOG.md`.
+5. Refresh **Verified Progress** / **Planned Next Steps** in `STATUS.md` when a tracking issue completes.
+
+This process is intentionally lightweight: decisions stay in one file, shipped changes stay in the changelog, and status stays current without a separate database.
+
 ## Current Decisions
 
 ### 1. Foundation-first development
@@ -104,6 +114,18 @@ A status file and at least one tracking issue should remain current so the proje
 
 **Branch protection:** recommended (admin setting) to require both checks on `main`; workflows are designed to provide those check names.
 
+### 9. Decision and changelog workflow (2026-08-03)
+
+**Decision:** Use `DECISIONS.md` for architecture rationale, `CHANGELOG.md` for shipped changes, and `STATUS.md` for current state. Process documented in `docs/MEMORY.md`.
+
+**Rationale:**
+
+- Chat is not durable memory.
+- Separating *why* (decisions), *what shipped* (changelog), and *where we are* (status) keeps each file easy to maintain.
+- Templates stay short so updates happen in the same change set as the code.
+
+**Consequences:** Contributors update these three files when architecture or notable behavior changes; Issue #7 defines this as the standing workflow.
+
 ## Required Build Work
 
 The documentation implies several build tasks that still need to exist in code:
@@ -113,7 +135,7 @@ The documentation implies several build tasks that still need to exist in code:
 3. ~~A minimal Super-Simulation entrypoint (Issue #4).~~ **Done**
 4. ~~A smoke test for simulation initialization (Issue #5).~~ **Done**
 5. ~~CI coverage for CLI and simulation startup (Issue #6).~~ **Done**
-6. A structured changelog or status update workflow (Issue #7).
+6. ~~A structured changelog or status update workflow (Issue #7).~~ **Done**
 
 ## Quality Standard
 
