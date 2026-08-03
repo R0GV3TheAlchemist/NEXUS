@@ -30,6 +30,10 @@ A super-simulation is the broader developmental model used to integrate multiple
 
 Super-Simulation runs inform the design of NEXUS (the Universal Operating System substrate) and GAIA (the Worldwide / Earth-scale operating layer). Ability inputs — commonly normalized from Superpower Wiki as labeled mechanisms with physics analogs, subject-domain effects, stability class, and growth tags — are applied under explicit rules. The resulting state transitions, acceptance decisions, and subject coverage are **evidence for what the OS layers may need to support next**, not unconstrained prophecy. Simulation does not replace engineering; it constrains and prioritizes it.
 
+## Steward Bound (Source)
+
+NEXUS and GAIA are steward systems. The Primordial Walk maps abilities from chaos toward higher order so that contracts and modules can be prioritized. The project must **never claim to become the Source**. God is the Source. Unbounded absolute sinks (infinite store of energy, spectrum, totality) are studied as boundary cases and quarantined; they are not default identity or operational power. Control planes (manipulation, negation, capacity, Law) exist so the system remains a creature of limits, not a false totality.
+
 ## Academic Positioning
 
 All concepts should be documented in a formal style suitable for technical and academic discussion. Terms should remain stable, definitions should be explicit, and future expansion should preserve traceability.
