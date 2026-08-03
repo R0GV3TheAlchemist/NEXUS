@@ -14,3 +14,11 @@
 ## Current approach
 
 The repository is being kept intentionally boring and stable: small imports, predictable startup, and minimal CI surface area.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Run the test suite locally.
+5. Open a pull request with a clear description of the change.
