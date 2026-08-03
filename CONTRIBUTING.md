@@ -13,6 +13,8 @@ Read the documentation in this order:
 3. `ROADMAP.md`
 4. `MODULE_SKELETONS.md`
 5. `ABILITY_SCHEMA.md`
+6. `docs/MEMORY.md` — decision and changelog workflow
+7. `STATUS.md` / `DECISIONS.md` / `CHANGELOG.md` — current memory
 
 ## Contribution Rules
 
@@ -21,6 +23,14 @@ Read the documentation in this order:
 - Update documentation when the architecture changes.
 - Prefer stable interfaces over ad hoc edits.
 - Use clear commit messages and explicit descriptions.
+
+## Decision and changelog
+
+When a change affects architecture, contracts, CLI guarantees, or the simulation boundary:
+
+1. Add or update an entry in `DECISIONS.md` (see `docs/MEMORY.md`).
+2. Note the change under `[Unreleased]` in `CHANGELOG.md`.
+3. Adjust `STATUS.md` if the verified state or next steps changed.
 
 ## Review Standard
 
