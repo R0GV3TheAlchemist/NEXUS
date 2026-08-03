@@ -10,7 +10,10 @@ Architecture decisions live in `DECISIONS.md`; this file records *what shipped*.
 
 ### Added
 
-- (none pending)
+- CoreState clamp to [0, 1] after ability effects.
+- Policy quarantine / embody flags for rule_breaking + destructive_oriented abilities.
+- Primordial Walk Batch 1 report (`docs/walks/BATCH_01.md`).
+- Steward / Source bound in FOUNDATIONS and DECISIONS §10.
 
 ## [0.1.0] — 2026-08-03
 
