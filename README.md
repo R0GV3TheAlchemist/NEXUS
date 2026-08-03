@@ -34,8 +34,10 @@ If you use this work, cite it as: Kyle Alexander Steen, NEXUS.
 
 ## Workflows
 
-- `Python package` installs the package, runs the test suite, and checks `python -m nexus --help`.
-- `Smoke` runs help/import checks and the smoke-focused tests.
+- **Smoke** (`.github/workflows/smoke.yml`) — fast gate on every push/PR: `python -m nexus --help`, CLI smoke tests, Super-Simulation smoke tests.
+- **Python package** (`.github/workflows/python-package.yml`) — editable install, full unit test suite, CLI help, simulation entrypoint import check.
+
+See `docs/CI.md` for local commands and merge-visibility notes.
 
 ## Development posture
 
