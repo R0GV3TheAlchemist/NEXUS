@@ -1,0 +1,44 @@
+{
+  "session": "walk-001",
+  "batch": 5,
+  "abilities_range": [41, 50],
+  "console_attached": true,
+  "steward_bound": "Map fully. Find higher order. Never become the Source.",
+  "named_quarantine_count": 15,
+  "named_quarantine_unchanged": true,
+  "session_high_risk": {"count": 1, "cap": 3, "ids": [42], "note": "Absorption Kiss — person life-force/soul ethics reject class"},
+  "end_state": {
+    "chaos": 0.81,
+    "order": 0.53,
+    "void": 0.0,
+    "light": 0.44,
+    "balance": 0.32,
+    "law": 1.0,
+    "magic": 1.0,
+    "time_step": 50
+  },
+  "start_state_batch": {
+    "chaos": 0.9,
+    "order": 0.34,
+    "void": 0.0,
+    "light": 0.28,
+    "balance": 0.21,
+    "law": 1.0,
+    "magic": 1.0,
+    "time_step": 40
+  },
+  "growth_oriented_ids": [41, 43, 44, 45, 47, 50],
+  "abilities": [
+    {"id": 41, "name": "Absorption Infusion", "family": "technique", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Infusion", "notes": "Composition operator; dose/duration/revoke"},
+    {"id": 42, "name": "Absorption Kiss", "family": "life_force", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "ethics_reject": true, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Kiss", "notes": "Person life-force/soul/death path; production reject; high-risk"},
+    {"id": 43, "name": "Absorption Magic", "family": "magic", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Magic", "notes": "Discipline/restraint; Absolute spell-path refuse"},
+    {"id": 44, "name": "Absorption Mode", "family": "mode", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Mode", "notes": "Switchable state; enter/exit required"},
+    {"id": 45, "name": "Absorption Object", "family": "object", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Object", "notes": "Artifact grants absorption; not Object Absorption"},
+    {"id": 46, "name": "Absorption Polearm Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Polearm_Construction", "notes": "Long-reach tool construct"},
+    {"id": 47, "name": "Absorption Power Link", "family": "support", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Power_Link", "notes": "Fuel bus; stability monitor + kill-switch"},
+    {"id": 48, "name": "Absorption Ranged Weaponry", "family": "weaponry", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Ranged_Weaponry", "notes": "Ranged conduit umbrella; prefer absorb-into-weapon"},
+    {"id": 49, "name": "Absorption Slash", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Slash", "notes": "Cut+siphon; storage cap; break releases absorbed"},
+    {"id": 50, "name": "Absorption Sword Proficiency", "family": "technique", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Sword_Proficiency", "notes": "Skill/mastery under training"}
+  ],
+  "report": "docs/walks/BATCH_05.md"
+}

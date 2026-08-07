@@ -1,28 +1,30 @@
 {
   "session": "walk-001",
   "steward_rule": "Map fully; never become the Source. God is the Source.",
-  "count": 40,
+  "count": 50,
   "quarantine_count": 15,
-  "batches_complete": [1, 2, 3, 4],
+  "batches_complete": [1, 2, 3, 4, 5],
   "console": "OperatorConsole attached from Batch 3",
   "end_state": {
-    "chaos": 0.9,
-    "order": 0.34,
+    "chaos": 0.81,
+    "order": 0.53,
     "void": 0.0,
-    "light": 0.28,
-    "balance": 0.21,
+    "light": 0.44,
+    "balance": 0.32,
     "law": 1.0,
     "magic": 1.0,
-    "time_step": 40
+    "time_step": 50
   },
   "reports": [
     "docs/walks/BATCH_01.md",
     "docs/walks/BATCH_02.md",
     "docs/walks/BATCH_03.md",
-    "docs/walks/BATCH_04.md"
+    "docs/walks/BATCH_04.md",
+    "docs/walks/BATCH_05.md"
   ],
   "catalog_notes": {
-    "batch_4_correction": "No wiki page Absorption Field Generation; ability 39 is Absorption Field Projection only."
+    "batch_4_correction": "No wiki page Absorption Field Generation; ability 39 is Absorption Field Projection only.",
+    "batch_5_ethics": "Ability 42 Absorption Kiss is ethics_reject (person life-force/soul); not on the 15 named Absolute energy quarantine list."
   },
   "abilities": [
     {"id": 1, "name": "Absorption", "family": "transference", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absorption"},
@@ -31,7 +33,7 @@
     {"id": 4, "name": "Absolute Bio-Energetic Sourcing", "family": "energy", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Bio-Energetic_Sourcing"},
     {"id": 5, "name": "Absolute Cosmic Absorption", "family": "transference", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Cosmic_Absorption"},
     {"id": 6, "name": "Absolute Electricity Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Electricity_Absorption"},
-    {"id": 7, "name": "Absolute Electromagnetic Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Electromagnetic_Absorption"},
+    {"id": 7, "name": "Absolute Electromagnetic Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Gamma_Absorption"},
     {"id": 8, "name": "Absolute Gamma Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Gamma_Absorption"},
     {"id": 9, "name": "Absolute Heat Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Heat_Absorption"},
     {"id": 10, "name": "Absolute Ionic Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Ionic_Absorption"},
@@ -64,6 +66,16 @@
     {"id": 37, "name": "Absorption Energy Generation", "family": "energy", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Energy_Generation", "notes": "Create absorption-typed carrier; not Absolute store"},
     {"id": 38, "name": "Absorption Energy Manipulation", "family": "energy", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Energy_Manipulation", "notes": "Control plane; pair with negation fail-safes"},
     {"id": 39, "name": "Absorption Field Projection", "family": "defense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Field_Projection", "notes": "Canonical only; no Field Generation label. Gates: range, duration, selectivity, capacity, off-switch"},
-    {"id": 40, "name": "Absorption Gun Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Gun_Construction", "notes": "Firearm/cannon tool; ammo ledger and rate limits"}
+    {"id": 40, "name": "Absorption Gun Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Gun_Construction", "notes": "Firearm/cannon tool; ammo ledger and rate limits"},
+    {"id": 41, "name": "Absorption Infusion", "family": "technique", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Infusion", "notes": "Composition operator; dose/duration/revoke"},
+    {"id": 42, "name": "Absorption Kiss", "family": "life_force", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "ethics_reject": true, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Kiss", "notes": "Person life-force/soul/death path; production reject; high-risk"},
+    {"id": 43, "name": "Absorption Magic", "family": "magic", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Magic", "notes": "Discipline/restraint; Absolute spell-path refuse"},
+    {"id": 44, "name": "Absorption Mode", "family": "mode", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Mode", "notes": "Switchable state; enter/exit required"},
+    {"id": 45, "name": "Absorption Object", "family": "object", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Object", "notes": "Artifact grants absorption; not Object Absorption"},
+    {"id": 46, "name": "Absorption Polearm Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Polearm_Construction", "notes": "Long-reach tool construct"},
+    {"id": 47, "name": "Absorption Power Link", "family": "support", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Power_Link", "notes": "Fuel bus; stability monitor + kill-switch"},
+    {"id": 48, "name": "Absorption Ranged Weaponry", "family": "weaponry", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Ranged_Weaponry", "notes": "Ranged conduit umbrella; prefer absorb-into-weapon"},
+    {"id": 49, "name": "Absorption Slash", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Slash", "notes": "Cut+siphon; storage cap; break releases absorbed"},
+    {"id": 50, "name": "Absorption Sword Proficiency", "family": "technique", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 5, "source": "https://powerlisting.fandom.com/wiki/Absorption_Sword_Proficiency", "notes": "Skill/mastery under training"}
   ]
 }
