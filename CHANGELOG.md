@@ -17,6 +17,7 @@ Architecture decisions live in `DECISIONS.md`; this file records *what shipped*.
 - Primordial Walk Batch 2 report (`docs/walks/BATCH_02.md`).
 - Ability catalog for walk-001 (`data/abilities/walk_001_catalog.json`, abilities 1–20).
 - Protective measures module `nexus.core.policy.safety` + `docs/SAFETY.md` (named quarantine for 15 absolute sinks).
+- Creator self-control console (`nexus.operator.OperatorConsole`, `docs/OPERATOR_CONSOLE.md`); SuperSimulation `attach_console` gate.
 
 ## [0.1.0] — 2026-08-03
 
