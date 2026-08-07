@@ -1,8 +1,10 @@
 {
   "session": "walk-001",
   "steward_rule": "Map fully; never become the Source. God is the Source.",
-  "count": 20,
+  "count": 30,
   "quarantine_count": 15,
+  "batches_complete": [1, 2, 3],
+  "console": "OperatorConsole attached from Batch 3",
   "abilities": [
     {"id": 1, "name": "Absorption", "family": "transference", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absorption"},
     {"id": 2, "name": "Absolute Absorption", "family": "transference", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Absorption"},
@@ -23,6 +25,16 @@
     {"id": 17, "name": "Absolute Solar Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 2, "source": "https://powerlisting.fandom.com/wiki/Absolute_Solar_Absorption"},
     {"id": 18, "name": "Absolute Stellar Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 2, "source": "https://powerlisting.fandom.com/wiki/Absolute_Stellar_Absorption"},
     {"id": 19, "name": "Absolute Thermic Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 2, "source": "https://powerlisting.fandom.com/wiki/Absolute_Thermic_Absorption"},
-    {"id": 20, "name": "Absolute Wave Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 2, "source": "https://powerlisting.fandom.com/wiki/Absolute_Wave_Absorption"}
+    {"id": 20, "name": "Absolute Wave Absorption", "family": "energy", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": true, "batch": 2, "source": "https://powerlisting.fandom.com/wiki/Absolute_Wave_Absorption"},
+    {"id": 21, "name": "Absorbent Creation", "family": "creation", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorbent_Creation"},
+    {"id": 22, "name": "Absorbent Defense", "family": "defense", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorbent_Defense"},
+    {"id": 23, "name": "Absorbing Regeneration", "family": "recovery", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorbing_Regeneration"},
+    {"id": 24, "name": "Absorbing Replication", "family": "transference", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorbing_Replication", "notes": "Steward-forbid unbounded identity / living assimilation"},
+    {"id": 25, "name": "Absorbing Vortex Creation", "family": "creation", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorbing_Vortex_Creation", "notes": "Control/range/capacity required"},
+    {"id": 26, "name": "Absorption Arts", "family": "technique", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Arts", "notes": "Craft under Law; not godhood path"},
+    {"id": 27, "name": "Absorption Attacks", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Attacks"},
+    {"id": 28, "name": "Absorption Ball Projection", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Ball_Projection"},
+    {"id": 29, "name": "Absorption Beam Emission", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Beam_Emission"},
+    {"id": 30, "name": "Absorption Blade Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Blade_Construction"}
   ]
 }
