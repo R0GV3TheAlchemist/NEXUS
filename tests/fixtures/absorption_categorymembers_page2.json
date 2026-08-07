@@ -1,0 +1,12 @@
+{
+  "batchcomplete": true,
+  "continue": {
+    "cmcontinue": "page|42494f|999",
+    "continue": "-||"
+  },
+  "query": {
+    "categorymembers": [
+      {"pageid": 10, "ns": 0, "title": "Absolute Absorption", "type": "page"}
+    ]
+  }
+}
