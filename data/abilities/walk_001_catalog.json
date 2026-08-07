@@ -1,10 +1,29 @@
 {
   "session": "walk-001",
   "steward_rule": "Map fully; never become the Source. God is the Source.",
-  "count": 30,
+  "count": 40,
   "quarantine_count": 15,
-  "batches_complete": [1, 2, 3],
+  "batches_complete": [1, 2, 3, 4],
   "console": "OperatorConsole attached from Batch 3",
+  "end_state": {
+    "chaos": 0.9,
+    "order": 0.34,
+    "void": 0.0,
+    "light": 0.28,
+    "balance": 0.21,
+    "law": 1.0,
+    "magic": 1.0,
+    "time_step": 40
+  },
+  "reports": [
+    "docs/walks/BATCH_01.md",
+    "docs/walks/BATCH_02.md",
+    "docs/walks/BATCH_03.md",
+    "docs/walks/BATCH_04.md"
+  ],
+  "catalog_notes": {
+    "batch_4_correction": "No wiki page Absorption Field Generation; ability 39 is Absorption Field Projection only."
+  },
   "abilities": [
     {"id": 1, "name": "Absorption", "family": "transference", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absorption"},
     {"id": 2, "name": "Absolute Absorption", "family": "transference", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "batch": 1, "source": "https://powerlisting.fandom.com/wiki/Absolute_Absorption"},
@@ -35,6 +54,16 @@
     {"id": 27, "name": "Absorption Attacks", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Attacks"},
     {"id": 28, "name": "Absorption Ball Projection", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Ball_Projection"},
     {"id": 29, "name": "Absorption Beam Emission", "family": "offense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Beam_Emission"},
-    {"id": 30, "name": "Absorption Blade Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Blade_Construction"}
+    {"id": 30, "name": "Absorption Blade Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 3, "source": "https://powerlisting.fandom.com/wiki/Absorption_Blade_Construction"},
+    {"id": 31, "name": "Absorption Bludgeon Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Fanon:Absorption_Bludgeon_Construction", "notes": "Finite tool construct; soul variants ethics-gated"},
+    {"id": 32, "name": "Absorption Bow Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Bow_Construction", "notes": "Ranged tool; range/rate/ammo/targeting contracts"},
+    {"id": 33, "name": "Absorption Combat", "family": "technique", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Combat", "notes": "Person-drain research-map only"},
+    {"id": 34, "name": "Absorption Defense", "family": "defense", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Defense", "notes": "Distinct from Absorbent Defense #22"},
+    {"id": 35, "name": "Absorption Element Manipulation", "family": "technique", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Fanon:Absorption_Element_Manipulation", "notes": "Not Elemental Absorption; concept/power drain ethics-gated"},
+    {"id": 36, "name": "Absorption Empowerment", "family": "energy", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Empowerment", "notes": "Single-type limit preferred"},
+    {"id": 37, "name": "Absorption Energy Generation", "family": "energy", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Energy_Generation", "notes": "Create absorption-typed carrier; not Absolute store"},
+    {"id": 38, "name": "Absorption Energy Manipulation", "family": "energy", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Energy_Manipulation", "notes": "Control plane; pair with negation fail-safes"},
+    {"id": 39, "name": "Absorption Field Projection", "family": "defense", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Field_Projection", "notes": "Canonical only; no Field Generation label. Gates: range, duration, selectivity, capacity, off-switch"},
+    {"id": 40, "name": "Absorption Gun Construction", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 4, "source": "https://powerlisting.fandom.com/wiki/Absorption_Gun_Construction", "notes": "Firearm/cannon tool; ammo ledger and rate limits"}
   ]
 }
