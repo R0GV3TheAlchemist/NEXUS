@@ -4,6 +4,13 @@ Catalog holds indexed Superpower Wiki rows. It does not mutate CoreState.
 See docs/SUPERPOWER_WIKI_INGESTION.md and docs/CATALOG_VS_WALK.md.
 """
 
+from nexus.catalog.classify import (
+    ClassifyReport,
+    ClassifyResult,
+    classify_entry,
+    classify_index,
+    classify_text,
+)
 from nexus.catalog.discover import (
     CategoryMember,
     discover_absorption_members,
@@ -25,6 +32,7 @@ from nexus.catalog.paths import (
     default_repo_root,
     ensure_absorption_layout,
 )
+from nexus.catalog.quarantine_names import quarantined_ability_names
 from nexus.catalog.store import CatalogStore
 from nexus.catalog.sync import SyncReport, merge_members_into_index, sync_absorption_catalog
 
@@ -34,12 +42,17 @@ __all__ = [
     "CatalogEntry",
     "CatalogStore",
     "CategoryMember",
+    "ClassifyReport",
+    "ClassifyResult",
     "EnrichReport",
     "PageDocument",
     "SchemaDraft",
     "SyncReport",
     "WalkRef",
     "absorption_root",
+    "classify_entry",
+    "classify_index",
+    "classify_text",
     "default_repo_root",
     "discover_absorption_members",
     "discover_category_members",
@@ -49,6 +62,7 @@ __all__ = [
     "fetch_page_documents",
     "merge_members_into_index",
     "pages_only",
+    "quarantined_ability_names",
     "subcats_only",
     "sync_absorption_catalog",
 ]
