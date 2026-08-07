@@ -1,0 +1,17 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 4242,
+        "ns": 0,
+        "title": "Bio-Capacitor",
+        "extract": "The power to bio-absorb and store ambient energy for later use. Sub-power of Bio-Energetic Sourcing and Bio-Energy Manipulation. Variation of Capacitor.",
+        "categories": [
+          {"ns": 14, "title": "Category:Absorption"},
+          {"ns": 14, "title": "Category:Organic Powers"}
+        ]
+      }
+    ]
+  }
+}

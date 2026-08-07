@@ -11,6 +11,7 @@ from nexus.catalog.discover import (
     pages_only,
     subcats_only,
 )
+from nexus.catalog.enrich import EnrichReport, enrich_absorption_pages
 from nexus.catalog.models import (
     POLICY_TAGS,
     CatalogCursor,
@@ -18,6 +19,7 @@ from nexus.catalog.models import (
     SchemaDraft,
     WalkRef,
 )
+from nexus.catalog.pages import PageDocument, fetch_one_page, fetch_page_documents
 from nexus.catalog.paths import (
     absorption_root,
     default_repo_root,
@@ -32,6 +34,8 @@ __all__ = [
     "CatalogEntry",
     "CatalogStore",
     "CategoryMember",
+    "EnrichReport",
+    "PageDocument",
     "SchemaDraft",
     "SyncReport",
     "WalkRef",
@@ -39,7 +43,10 @@ __all__ = [
     "default_repo_root",
     "discover_absorption_members",
     "discover_category_members",
+    "enrich_absorption_pages",
     "ensure_absorption_layout",
+    "fetch_one_page",
+    "fetch_page_documents",
     "merge_members_into_index",
     "pages_only",
     "subcats_only",

@@ -1,0 +1,25 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 1,
+        "ns": 0,
+        "title": "Absorption",
+        "extract": "The power to absorb anything and utilize it in some way.",
+        "categories": [{"ns": 14, "title": "Category:Absorption"}]
+      },
+      {
+        "pageid": 2,
+        "ns": 0,
+        "title": "Bio-Energetic Conversion",
+        "extract": "The power to absorb and convert bio-energy.",
+        "categories": [{"ns": 14, "title": "Category:Absorption"}]
+      },
+      {
+        "missing": true,
+        "title": "Not A Real Page"
+      }
+    ]
+  }
+}
