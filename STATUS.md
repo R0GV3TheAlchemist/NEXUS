@@ -2,11 +2,13 @@
 
 ## Current State
 
-NEXUS is in foundation-correction mode. The immediate goal is to keep the project stable, boring, and testable while the architecture is clarified and aligned across docs, code, and tests. Primordial Walk Batch 1 is complete.
+NEXUS is in foundation-correction mode. The immediate goal is to keep the project stable, boring, and testable while the architecture is clarified and aligned across docs, code, and tests. Primordial Walk Batches 1–2 are complete (abilities 1–20).
 
 ## Verified Progress
 
 - **Primordial Walk Batch 1 (abilities 1–10)** complete; see `docs/walks/BATCH_01.md`.
+- **Primordial Walk Batch 2 (abilities 11–20)** complete; see `docs/walks/BATCH_02.md`.
+- **Ability catalog** `data/abilities/walk_001_catalog.json` (abilities 1–20).
 - **CoreState clamp [0,1]** after effects; policy quarantine flags for destructive rule-breaking sinks.
 - **Steward / Source bound** recorded in FOUNDATIONS and DECISIONS §10.
 - The CLI import error was fixed.
@@ -43,8 +45,8 @@ NEXUS is in foundation-correction mode. The immediate goal is to keep the projec
 
 ## Planned Next Steps
 
-1. Continue Primordial Walk from ability #11 (Batch 2).
-2. Prefer documenting domain gaps (EM, thermal, grid, radiation) as module skeletons when the Walk demands them.
+1. Continue Primordial Walk from ability #21 (Batch 3).
+2. Prefer documenting domain gaps (EM, thermal, grid, radiation, astrophysics, acoustics) as module skeletons when the Walk demands them.
 
 ## Foundation tracking
 
