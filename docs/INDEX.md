@@ -12,7 +12,8 @@
 
 - `docs/walks/BATCH_01.md` — Primordial Walk batch 1 (abilities 1–10).
 - `docs/walks/BATCH_02.md` — Primordial Walk batch 2 (abilities 11–20).
-- `data/abilities/walk_001_catalog.json` — structured ability catalog (1–20).
+- `docs/walks/BATCH_03.md` — Primordial Walk batch 3 (abilities 21–30).
+- `data/abilities/walk_001_catalog.json` — structured ability catalog (1–30).
 - `docs/SAFETY.md` — protective measures for walk-001 quarantined abilities.
 - `docs/OPERATOR_CONSOLE.md` — Creator self-control console (self-only).
 - `docs/MEMORY.md` — decision log and changelog workflow.
