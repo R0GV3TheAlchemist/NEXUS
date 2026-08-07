@@ -14,6 +14,8 @@ Architecture decisions live in `DECISIONS.md`; this file records *what shipped*.
 - Policy quarantine / embody flags for rule_breaking + destructive_oriented abilities.
 - Primordial Walk Batch 1 report (`docs/walks/BATCH_01.md`).
 - Steward / Source bound in FOUNDATIONS and DECISIONS §10.
+- Primordial Walk Batch 2 report (`docs/walks/BATCH_02.md`).
+- Ability catalog for walk-001 (`data/abilities/walk_001_catalog.json`, abilities 1–20).
 
 ## [0.1.0] — 2026-08-03
 
