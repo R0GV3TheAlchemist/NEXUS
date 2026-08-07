@@ -35,6 +35,7 @@ from nexus.catalog.paths import (
 from nexus.catalog.quarantine_names import quarantined_ability_names
 from nexus.catalog.store import CatalogStore
 from nexus.catalog.sync import SyncReport, merge_members_into_index, sync_absorption_catalog
+from nexus.catalog.walk_queue import QueueItem, WalkQueue, open_walk_queue, walkable_entries
 
 __all__ = [
     "POLICY_TAGS",
@@ -46,8 +47,10 @@ __all__ = [
     "ClassifyResult",
     "EnrichReport",
     "PageDocument",
+    "QueueItem",
     "SchemaDraft",
     "SyncReport",
+    "WalkQueue",
     "WalkRef",
     "absorption_root",
     "classify_entry",
@@ -61,8 +64,10 @@ __all__ = [
     "fetch_one_page",
     "fetch_page_documents",
     "merge_members_into_index",
+    "open_walk_queue",
     "pages_only",
     "quarantined_ability_names",
     "subcats_only",
     "sync_absorption_catalog",
+    "walkable_entries",
 ]
