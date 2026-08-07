@@ -4,6 +4,14 @@ Catalog holds indexed Superpower Wiki rows. It does not mutate CoreState.
 See docs/SUPERPOWER_WIKI_INGESTION.md and docs/CATALOG_VS_WALK.md.
 """
 
+from nexus.catalog.batch_report import (
+    BatchReportInput,
+    BatchWriteResult,
+    ConsoleSnapshot,
+    batch_number_for_ability_index,
+    write_batch_from_catalog,
+    write_batch_report,
+)
 from nexus.catalog.classify import (
     ClassifyReport,
     ClassifyResult,
@@ -39,12 +47,15 @@ from nexus.catalog.walk_queue import QueueItem, WalkQueue, open_walk_queue, walk
 
 __all__ = [
     "POLICY_TAGS",
+    "BatchReportInput",
+    "BatchWriteResult",
     "CatalogCursor",
     "CatalogEntry",
     "CatalogStore",
     "CategoryMember",
     "ClassifyReport",
     "ClassifyResult",
+    "ConsoleSnapshot",
     "EnrichReport",
     "PageDocument",
     "QueueItem",
@@ -53,6 +64,7 @@ __all__ = [
     "WalkQueue",
     "WalkRef",
     "absorption_root",
+    "batch_number_for_ability_index",
     "classify_entry",
     "classify_index",
     "classify_text",
@@ -70,4 +82,6 @@ __all__ = [
     "subcats_only",
     "sync_absorption_catalog",
     "walkable_entries",
+    "write_batch_from_catalog",
+    "write_batch_report",
 ]
