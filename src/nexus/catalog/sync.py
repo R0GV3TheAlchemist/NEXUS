@@ -35,19 +35,25 @@ def _letter_bucket(title: str) -> str:
     return title[:1].upper() if title else ""
 
 
+def _is_fanon_title(title: str) -> bool:
+    t = title.strip()
+    return t.startswith("Fanon:") or "/Fanon:" in t or t.startswith("User:")
+
+
 def member_to_entry(member: CategoryMember) -> CatalogEntry:
     tags: tuple[str, ...] = ()
-    # Subcategory rows are structural; pages start untagged (I4 classifies).
     return CatalogEntry(
         name=member.title,
         url=member.url,
-        category_path=("Absorption",) if not member.is_subcategory else ("Absorption", "_subcat"),
+        category_path=("Absorption",)
+        if not member.is_subcategory
+        else ("Absorption", "_subcat"),
         letter_bucket=_letter_bucket(member.title),
         summary="",
         schema_draft=SchemaDraft(),
         policy_tags=tags,
         walk=WalkRef(status="pending"),
-        fanon="/Fanon:" in member.title or member.title.startswith("Fanon:"),
+        fanon=_is_fanon_title(member.title),
     )
 
 
@@ -61,10 +67,9 @@ def merge_members_into_index(
     existing = store.load_index()
     by_key = {e.name.casefold(): e for e in existing}
 
-    selected: list[CategoryMember] = []
     page_rows = pages_only(members)
-    selected.extend(page_rows)
     sub_rows = subcats_only(members) if include_subcats else []
+    selected: list[CategoryMember] = list(page_rows)
     if include_subcats:
         selected.extend(sub_rows)
 
@@ -81,7 +86,6 @@ def merge_members_into_index(
             merged[key] = fresh
             added += 1
             continue
-        # Preserve adjudication fields; refresh url/letter/category_path/fanon.
         preserved += 1
         if old.url != fresh.url or old.letter_bucket != fresh.letter_bucket:
             updated_meta += 1
@@ -99,7 +103,6 @@ def merge_members_into_index(
             walk=old.walk,
         )
 
-    # Stable order: alphabetical by name (category spine).
     ordered = sorted(merged.values(), key=lambda e: e.name.casefold())
     store.save_index(ordered)
 

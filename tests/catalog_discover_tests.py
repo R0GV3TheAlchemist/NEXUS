@@ -5,6 +5,7 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from urllib.parse import unquote
 
 from nexus.catalog.discover import (
     build_categorymembers_url,
@@ -34,7 +35,8 @@ class ParseTests(unittest.TestCase):
     def test_build_url_contains_category(self) -> None:
         url = build_categorymembers_url(category_title="Category:Absorption")
         self.assertIn("categorymembers", url)
-        self.assertIn("Category%3AAbsorption", url)
+        decoded = unquote(url)
+        self.assertIn("Category:Absorption", decoded)
 
 
 class DiscoverPaginationTests(unittest.TestCase):

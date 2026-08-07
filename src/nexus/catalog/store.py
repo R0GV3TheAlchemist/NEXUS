@@ -19,8 +19,8 @@ class CatalogStore:
     """Filesystem-backed Absorption catalog."""
 
     def __init__(self, repo_root: Path | None = None) -> None:
-        self.repo_root = repo_root
-        self.root = ensure_absorption_layout(repo_root)
+        self.repo_root = Path(repo_root).resolve() if repo_root is not None else None
+        self.root = ensure_absorption_layout(self.repo_root)
 
     @property
     def index_path(self) -> Path:
@@ -46,6 +46,10 @@ class CatalogStore:
                     raise ValueError(
                         f"invalid JSONL at {path}:{line_no}: {exc}"
                     ) from exc
+                if not isinstance(data, dict):
+                    raise ValueError(
+                        f"invalid JSONL at {path}:{line_no}: expected object"
+                    )
                 entries.append(CatalogEntry.from_dict(data))
         return entries
 
@@ -57,6 +61,11 @@ class CatalogStore:
         text = "\n".join(lines)
         if text:
             text += "\n"
+        else:
+            text = (
+                "# Absorption catalog index (JSONL). "
+                "Populate via scripts/discover_absorption.py\n"
+            )
         self.index_path.write_text(text, encoding="utf-8")
 
     def append_entry(self, entry: CatalogEntry) -> None:
@@ -68,7 +77,10 @@ class CatalogStore:
         path = self.cursor_path
         if not path.exists():
             return None
-        data = json.loads(path.read_text(encoding="utf-8"))
+        raw = path.read_text(encoding="utf-8").strip()
+        if not raw:
+            return None
+        data = json.loads(raw)
         return CatalogCursor.from_dict(data)
 
     def save_cursor(self, cursor: CatalogCursor) -> None:

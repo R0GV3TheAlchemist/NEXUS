@@ -25,6 +25,7 @@ jobs:
         run: |
           python -m unittest \
             tests.catalog_smoke_tests \
+            tests.catalog_paths_tests \
             tests.catalog_discover_tests \
             tests.catalog_pages_tests \
             tests.catalog_classify_tests \
