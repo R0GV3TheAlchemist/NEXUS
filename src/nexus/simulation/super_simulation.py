@@ -52,6 +52,7 @@ class SuperSimulation:
         )
         self.engine = NEXUSEngine(output_dir=output_dir, state=initial)
         self.runs: List[Dict[str, Any]] = []
+        self.console: Optional[Any] = None  # OperatorConsole; self-control gate only
 
     def snapshot(self) -> Dict[str, Any]:
         return self.engine.snapshot()
@@ -62,8 +63,35 @@ class SuperSimulation:
         self.runs.clear()
         return self.snapshot()
 
+    def attach_console(self, console: Any) -> None:
+        """Attach Creator self-control console (operator regulating themselves only)."""
+        self.console = console
+
+    def console_status(self) -> Optional[Dict[str, Any]]:
+        if self.console is None:
+            return None
+        return self.console.status()
+
     def ingest_payload(self, payload: Dict[str, Any], run_id: Optional[str] = None) -> Dict[str, Any]:
-        """Validate a Superpower-Wiki-style payload and apply it if accepted."""
+        """Validate a Superpower-Wiki-style payload and apply it if accepted.
+
+        If an OperatorConsole is attached, ingest is gated by may_ingest
+        (self-control only — not control of others).
+        """
+        if self.console is not None:
+            gate = self.console.may_ingest(payload)
+            if not gate.get("allowed", True):
+                record = {
+                    "run_id": run_id or f"blocked-{len(self.runs) + 1}",
+                    "accepted": False,
+                    "blocked_by_console": True,
+                    "issues": [gate.get("reason") or "operator console blocked ingest"],
+                    "console": self.console.status(),
+                    "state": self.snapshot(),
+                }
+                self.runs.append(record)
+                return record
+
         validation = ingest_ability_payload(payload)
         if not validation["accepted"] or validation["ability"] is None:
             record = {
@@ -87,6 +115,12 @@ class SuperSimulation:
             "interpretation": result.interpretation,
             "state": self.snapshot(),
         }
+        if self.console is not None:
+            growth = (payload.get("growth_tag") or "").lower()
+            stability = (payload.get("stability") or "").lower()
+            if growth == "destructive_oriented" or stability == "rule_breaking":
+                self.console.record_high_risk_ingest()
+            record["console"] = self.console.status()
         self.runs.append(record)
         return record
 
@@ -130,12 +164,7 @@ class SuperSimulation:
         }
 
     def recommend(self) -> List[Dict[str, str]]:
-        """Heuristic build recommendations from current state and subject gaps.
-
-        These are evidence-shaped suggestions for OS module work, not oracle
-        outputs. Higher void / lower order / law suggest foundation work;
-        growth-tagged runs and covered subjects inform prioritization.
-        """
+        """Heuristic build recommendations from current state and subject gaps."""
         s = self.engine.state
         tips: List[Dict[str, str]] = []
 
@@ -182,12 +211,5 @@ def initialize_super_simulation(
     output_dir: str = "data/runs",
     use_primordial: bool = True,
 ) -> SuperSimulation:
-    """Single public entrypoint for Super-Simulation initialization.
-
-    Import-safe and suitable for smoke tests:
-
-        from nexus.simulation import initialize_super_simulation
-        sim = initialize_super_simulation()
-        sim.ingest_payload({...})
-    """
+    """Single public entrypoint for Super-Simulation initialization."""
     return SuperSimulation(output_dir=output_dir, use_primordial=use_primordial)
