@@ -1,0 +1,16 @@
+{
+  "batch_number": 7,
+  "ability_range": [61, 70],
+  "abilities": [
+    {"ability_index": 61, "name": "Antimatter Absorption", "policy_tags": ["high_risk"]},
+    {"ability_index": 62, "name": "Antimatter Breath", "policy_tags": ["high_risk"]},
+    {"ability_index": 63, "name": "Assimilation Immunity", "policy_tags": ["stabilizer", "map_ok"]},
+    {"ability_index": 64, "name": "Assimilation Shield", "policy_tags": ["stabilizer", "map_ok"]},
+    {"ability_index": 65, "name": "Assimilative Evolution", "policy_tags": ["ethics_reject", "high_risk"]},
+    {"ability_index": 66, "name": "Assimilative Infection", "policy_tags": ["ethics_reject", "high_risk"]},
+    {"ability_index": 67, "name": "Aura Absorption", "policy_tags": ["ethics_reject"]},
+    {"ability_index": 68, "name": "Beauty Thievery", "policy_tags": ["ethics_reject"]},
+    {"ability_index": 69, "name": "Benevorous", "policy_tags": ["ethics_reject"]},
+    {"ability_index": 70, "name": "Bio-Absorbing Replication", "policy_tags": ["ethics_reject", "high_risk"]}
+  ]
+}

@@ -1,0 +1,39 @@
+name: Catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  catalog-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Catalog unit + golden + pipeline smoke
+        run: |
+          python -m unittest \
+            tests.catalog_smoke_tests \
+            tests.catalog_discover_tests \
+            tests.catalog_pages_tests \
+            tests.catalog_classify_tests \
+            tests.catalog_walk_queue_tests \
+            tests.catalog_batch_report_tests \
+            tests.catalog_golden_tests \
+            tests.catalog_pipeline_smoke_tests \
+            -v
+
+      - name: Catalog modules import
+        run: |
+          python -c "from nexus.catalog import CatalogStore, WalkQueue, write_batch_report, classify_text"
