@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -99,11 +100,20 @@ class CatalogStoreTests(unittest.TestCase):
             self.assertEqual(found.name, "Bio-Capacitor")
 
     def test_store_does_not_import_simulation(self) -> None:
+        """Catalog store must not import simulation / CoreState (docstrings OK)."""
         import nexus.catalog.store as store_mod
 
         source = Path(store_mod.__file__).read_text(encoding="utf-8")
         self.assertNotIn("nexus.simulation", source)
-        self.assertNotIn("CoreState", source)
+        self.assertNotIn("nexus.sim", source)
+        import_corestate = re.compile(
+            r"^\s*(from\s+\S+\s+import\s+.*\bCoreState\b|import\s+.*\bCoreState\b)",
+            re.M,
+        )
+        self.assertIsNone(
+            import_corestate.search(source),
+            msg="store.py must not import CoreState",
+        )
 
 
 if __name__ == "__main__":
