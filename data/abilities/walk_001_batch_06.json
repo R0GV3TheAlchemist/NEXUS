@@ -1,0 +1,56 @@
+{
+  "session": "walk-001",
+  "batch": 6,
+  "abilities_range": [51, 60],
+  "console_attached": true,
+  "steward_bound": "Map fully. Find higher order. Never become the Source.",
+  "named_quarantine_count": 15,
+  "named_quarantine_unchanged": true,
+  "session_high_risk": {
+    "count": 6,
+    "cap": 3,
+    "over_cap": true,
+    "ids": [53, 55, 56, 57, 58],
+    "note": "Also carries Batch 5 #42 Kiss in continuous session tally; stress cluster Entity/Adaptive/Air/Almighty/Alternate-Self"
+  },
+  "hard_rejects": [
+    {"id": 53, "name": "Absorptive Entity Access", "class": "ethics_domination"},
+    {"id": 56, "name": "Air Drain", "class": "planetary_life_support"},
+    {"id": 57, "name": "Almighty Absorbing Replication", "class": "source_path_omni_assimilation"},
+    {"id": 58, "name": "Alternate-Self Absorption", "class": "ethics_multiverse_identity"}
+  ],
+  "end_state": {
+    "chaos": 0.9,
+    "order": 0.54,
+    "void": 0.0,
+    "light": 0.54,
+    "balance": 0.24,
+    "law": 1.0,
+    "magic": 1.0,
+    "time_step": 60
+  },
+  "start_state_batch": {
+    "chaos": 0.81,
+    "order": 0.53,
+    "void": 0.0,
+    "light": 0.44,
+    "balance": 0.32,
+    "law": 1.0,
+    "magic": 1.0,
+    "time_step": 50
+  },
+  "growth_oriented_ids": [51, 54, 59],
+  "abilities": [
+    {"id": 51, "name": "Absorption Weaponry", "family": "weaponry", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Absorption_Weaponry", "notes": "Root category; soul-eating known objects ethics-reject"},
+    {"id": 52, "name": "Absorption Whip Generation", "family": "creation", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Absorption_Whip_Generation", "notes": "Flexible tool; length/tension/capacity gates"},
+    {"id": 53, "name": "Absorptive Entity Access", "family": "entity", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": false, "ethics_reject": true, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Absorptive_Entity_Access", "notes": "Absorb+subjugate persons; production reject; HR"},
+    {"id": 54, "name": "Accelerated Assimilation", "family": "biological", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Accelerated_Assimilation", "notes": "Metabolic rate; not entity enslavement"},
+    {"id": 55, "name": "Adaptive Attribute Assimilation", "family": "adaptation", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "source_path_refuse": true, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Adaptive_Attribute_Assimilation", "notes": "Bounded learning map-ok; unlimited transcendence refuse; HR"},
+    {"id": 56, "name": "Air Drain", "family": "elemental", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": false, "planetary_reject": true, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Fanon:Air_Drain", "notes": "Life-support medium; related Air_Absorption/Deoxygenation; HR over cap"},
+    {"id": 57, "name": "Almighty Absorbing Replication", "family": "almighty", "stability": "rule_breaking", "growth_tag": "destructive_oriented", "quarantine": false, "source_path_refuse": true, "hard_reject": true, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Almighty_Absorbing_Replication", "notes": "Omni-Assimilation boundary stone; never embody; HR"},
+    {"id": 58, "name": "Alternate-Self Absorption", "family": "identity", "stability": "rule_breaking", "growth_tag": "context_dependent", "quarantine": false, "ethics_reject": true, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Alternate-Self_Absorption", "notes": "Consume alternate selves; production reject; HR"},
+    {"id": 59, "name": "Ambient Energy Conversion", "family": "energy", "stability": "conditionally_stable", "growth_tag": "growth_oriented", "quarantine": false, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Ambient_Energy_Conversion", "notes": "Finite ambient limit; primary Batch 6 stabilizer"},
+    {"id": 60, "name": "Anger Absorption", "family": "emotion", "stability": "conditionally_stable", "growth_tag": "context_dependent", "quarantine": false, "batch": 6, "source": "https://powerlisting.fandom.com/wiki/Anger_Absorption", "notes": "Consent-gated; de-escalation vs emotion-theft dual face"}
+  ],
+  "report": "docs/walks/BATCH_06.md"
+}
