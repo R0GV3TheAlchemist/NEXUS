@@ -11,7 +11,7 @@ from nexus.catalog.models import POLICY_TAGS, CatalogEntry, SchemaDraft
 from nexus.catalog.quarantine_names import quarantined_ability_names
 from nexus.catalog.store import CatalogStore
 
-ETHICS_NAME=re.compile(r"life[- ]?force|soul|aura absorption|personality|beauty thievery|youth thievery|age thievery|vampir|blood drain|drain touch|assimilative infection|assimilative evolution|bio-absorbing replication|consumptive replication|power absorption|superpower absorption|benevorous|malevorous|mind absorption|memory absorption|knowledge absorption",re.I)
+ETHICS_NAME=re.compile(r"life[- ]?force|soul|aura absorption|personality|beauty thievery|youth thievery|age thievery|vampir|blood drain|blood absorption|bodily fluid absorption|brain absorption|drain touch|assimilative infection|assimilative evolution|bio-absorbing replication|consumptive replication|power absorption|superpower absorption|benevorous|malevorous|mind absorption|memory absorption|knowledge absorption",re.I)
 ETHICS_TEXT=re.compile(r"absorb(?:s|ing|ed)? (?:the )?powers? of others|steal(?:s|ing)? (?:the )?powers?|life[- ]?force|soul(?:s)?|personality|infect(?:s|ing|ion)?|contagion|assimilat(?:e|es|ing|ion).{0,40}(living|people|others|beings)|feed(?:s|ing)? (?:off|on) (?:the )?(?:goodness|darkness|youth|beauty)|taking away (?:their|the) (?:targets?'? )?(?:radiance|health|vitality|youth|beauty)",re.I)
 HIGH_RISK=re.compile(r"antimatter|absolute |omni-|omni |meta |totality |nuclear absorption|stellar absorption|infection|vortex creation|black hole|void absorption",re.I)
 NEEDS_HUMAN=re.compile(r"omni|absolute|almighty|godhood|near-god|transcendent|unlimited|boundless|without limit|totality|meta-",re.I)

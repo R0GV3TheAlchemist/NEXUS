@@ -22,4 +22,14 @@ class ClassifyTests(unittest.TestCase):
    store=CatalogStore(repo_root=Path(tmp)); store.save_index([CatalogEntry(name="Bio-Capacitor",url="https://x",summary="Store ambient energy.",walk=WalkRef(status="applied",ability_index=72,session_id="walk-001")),CatalogEntry(name="Unknown",url="https://x")]); classify_index(store)
    bio=store.get_by_name("Bio-Capacitor"); unknown=store.get_by_name("Unknown"); assert bio and unknown
    self.assertEqual(bio.walk.ability_index,72); self.assertIn("map_ok",bio.policy_tags); self.assertIn("needs_human",unknown.policy_tags)
+ def test_invasive_biological_absorption_rejects(self):
+  for name in (
+   "Blood Absorption",
+   "Bodily Fluid Absorption",
+   "Brain Absorption",
+  ):
+   result=classify_text(name,"Nonempty catalog summary.")
+   self.assertIn("ethics_reject",result.tags)
+   self.assertNotIn("map_ok",result.tags)
+
 if __name__=="__main__": unittest.main()
