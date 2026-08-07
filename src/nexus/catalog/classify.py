@@ -21,6 +21,11 @@ STABILITY={"quarantine_named":"rule_breaking","ethics_reject":"rule_breaking","h
 GROWTH={"quarantine_named":"destructive_oriented","ethics_reject":"destructive_oriented","high_risk":"destructive_oriented","needs_human":"context_dependent","stabilizer":"growth_oriented","resource_pool":"growth_oriented","map_ok":"growth_oriented"}
 ORDER=("quarantine_named","ethics_reject","high_risk","needs_human","stabilizer","resource_pool","map_ok")
 
+MANUAL_PRIMARY = {
+    "life-force conversion": ("needs_human", "manual_contextual_conversion"),
+    "metamorphic conversion": ("map_ok", "manual_self_sourced_conversion"),
+}
+
 @dataclass(frozen=True)
 class ClassifyResult:
     name:str; tags:tuple[str,...]; reasons:tuple[str,...]; primary:str
@@ -36,6 +41,11 @@ def classify_entry(entry:CatalogEntry)->ClassifyResult:
     name=entry.name.strip(); summary=(entry.summary or "").strip()
     if name.startswith("Category:") or (len(entry.category_path)>1 and entry.category_path[-1]=="_subcat"):
         return ClassifyResult(name,(),("structural_subcategory",),"structural")
+    manual = MANUAL_PRIMARY.get(name.casefold())
+    if manual:
+        primary, reason = manual
+        return ClassifyResult(name, (primary,), (reason,), primary)
+
     tags=[]; reasons=[]; blob=name+"\n"+summary
     if name in quarantined_ability_names(): tags.append("quarantine_named"); reasons.append("exact_quarantine_name")
     if ETHICS_NAME.search(name) or ETHICS_TEXT.search(blob): tags.append("ethics_reject"); reasons.append("ethics_pattern")
