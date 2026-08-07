@@ -11,6 +11,8 @@
 ## Supporting Documents
 
 - `docs/walks/BATCH_01.md` — Primordial Walk batch 1 (abilities 1–10).
+- `docs/walks/BATCH_02.md` — Primordial Walk batch 2 (abilities 11–20).
+- `data/abilities/walk_001_catalog.json` — structured ability catalog (1–20).
 - `docs/MEMORY.md` — decision log and changelog workflow.
 - `docs/CI.md` — continuous integration workflows for CLI and simulation startup.
 - `CHANGELOG.md` — notable shipped changes.
